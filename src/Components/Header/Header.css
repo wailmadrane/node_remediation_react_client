@@ -1,0 +1,12 @@
+.hero{
+   background-color: yellow;
+   color: #252525;
+   padding: 1rem;
+   font-size: 2rem;
+   text-align: center;
+}
+
+.hero:hover{
+   background-color: #252525;
+   color: yellow;
+}
