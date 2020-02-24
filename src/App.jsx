@@ -26,11 +26,17 @@ const App = () => {
   // Get new game data from From on submit
   const handleSubmit = async e => {
     e.preventDefault();
+
+    const strRatings = e.target.ratings.value.replace(/[\s]/g, '').split(',')
+    const ratings = strRatings.map(parseFloat)
+
     const reqBody = {
       title: e.target.title.value,
       stock: e.target.stock.value,
-      type: e.target.type.value
+      type: e.target.type.value,
+      ratings: ratings
     }
+    console.log(reqBody)  
     addGame(reqBody, e.persist())
     e.target.reset()
   }
@@ -50,8 +56,7 @@ const App = () => {
 
     } catch (err) {
       console.error(err)
-    }
-    
+    } 
   }
 
 	return (
