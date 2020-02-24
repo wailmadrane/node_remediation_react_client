@@ -18,6 +18,23 @@ body {
 
 .btn {
    padding: 2rem;
+   margin: .2rem;
    background-color: transparent;
    border: 1px solid #252525;
+}
+
+.gameForm {
+   display: inline-flex;
+   justify-content: start;
+   align-items: center;
+   flex-direction: column;
+}
+
+.gameForm > input {
+   padding: 1rem;
+   margin: .2rem;
+}
+
+.btn-wrapper {
+   width: 100%;
 }
