@@ -1,40 +1,54 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 body {
-   font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .fz3 {
-   font-size: 3rem;
+  font-size: 3rem;
 }
 
 .fz2 {
-   font-size: 2rem;
+  font-size: 2rem;
 }
 
 .fz1 {
-   font-size: 2rem;
+  font-size: 2rem;
 }
 
 .btn {
-   padding: 2rem;
-   margin: .2rem;
-   background-color: transparent;
-   border: 1px solid #252525;
+  padding: 2rem;
+  margin: .2rem;
+  background-color: transparent;
+  border: 1px solid #252525;
 }
 
 .gameForm {
-   display: inline-flex;
-   justify-content: start;
-   align-items: center;
-   flex-direction: column;
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
 }
 
 .gameForm > input {
-   padding: 1rem;
-   margin: .2rem;
+  padding: 1rem;
+  margin: .2rem;
 }
 
 .btn-wrapper {
-   width: 100%;
+  width: 100%;
+}
+
+.navigation__link {
+  margin: .2em;
+  margin-bottom: 0;
+  padding: .5em;
+  color: #252525;
+  border: 1px solid #454545;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.navigation__link:hover {
+  color: gray;
 }

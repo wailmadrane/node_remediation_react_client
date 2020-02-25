@@ -4,6 +4,8 @@ import Header from './Components/Header/Header'
 import GameList from './Components/Main/GameList/GameList'
 import Form from './Components/Main/Aside/Form/Form'
 import "./App.css"
+// Router
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 const App = () => {
   const [games, setGames] = useState(null);
@@ -62,8 +64,27 @@ const App = () => {
 	return (
 		<div className="App">
 			<Header title="Game Api" description="let's go dude"/>
-			<GameList games={games}/>
-      <Form handleSubmit={handleSubmit} />
+      <Router>
+        <nav className="navigation" >
+          <Link className="navigation__link" to="/">Home</Link>
+          <Link className="navigation__link" to="/rating">Ratings</Link>
+        </nav>
+
+        {/* Games */}
+        <Route exact path='/'>
+          <GameList games={games}/>
+        </Route>
+
+        {/* Ratings */}
+        <Route path='/rating'>
+          <div>Ratings</div>
+        </Route>
+
+        {/* Game details */}
+        <Route path='/test' component={null}/>
+
+        <Form handleSubmit={handleSubmit} />
+      </Router>
 		</div>
 	);
 }
